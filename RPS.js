@@ -36,8 +36,29 @@ function determineOutcome(){
     return(outcome);
 }
 
-let playerChoice, computerChoice, outcome;
-computerChoice = getComputerChoice();
-playerChoice = "Rock";
-outcome = determineOutcome();
+function getPlayerChoice(){
+    let choice;
+    choice = prompt("Rock, Paper or Scissors?");
+    if (choice.toLowerCase() === "rock"){
+        alert("You chose Rock!");
+        return("Rock");
+    }
+    else if (choice.toLowerCase() === "paper"){
+        alert("You chose Paper");
+        return("Paper");
+    }
+    else if (choice.toLowerCase() === "scissors"){
+        alert("You chose Scissors");
+        return("Scissors");
+    }
+    else{
+        alert("You chose what now?");
+    }
+    console.log(choice);
+}
 
+let playerChoice, computerChoice, outcome;
+
+computerChoice = getComputerChoice();
+playerChoice = getPlayerChoice();
+outcome = determineOutcome();
