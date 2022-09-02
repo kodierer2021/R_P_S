@@ -1,5 +1,3 @@
-/*a = Math.floor(Math.random() * 3);
-*/
 function getComputerChoice(){
     let a, b;
     a = Math.floor(Math.random() * 3);
@@ -39,15 +37,12 @@ function getPlayerChoice(){
     let choice;
     choice = prompt("Rock, Paper or Scissors?");
     if (choice.toLowerCase() === "rock"){
-    /*    alert("You chose Rock!");  */
         return("Rock");
     }
     else if (choice.toLowerCase() === "paper"){
-    /*    alert("You chose Paper"); */
         return("Paper");
     }
     else if (choice.toLowerCase() === "scissors"){
-    /*    alert("You chose Scissors"); */
         return("Scissors");
     }
     else{
@@ -57,15 +52,12 @@ function getPlayerChoice(){
     console.log(choice);
 }
 
-let playerChoice, computerChoice, outcome;
-
 function playRound(){
 computerChoice = getComputerChoice();
 playerChoice = getPlayerChoice();
 outcome = determineOutcome();
 alert("You played "+ playerChoice + " the computer picked " + computerChoice + " and you " + outcome+ "!");
 }
-
 
 function game(){
     let scoreWin = 0, scoreDraw = 0, scoreLose = 0;
@@ -83,6 +75,18 @@ function game(){
     }
     alert(scoreWin +" rounds won and " + scoreDraw + " draws and "+ scoreLose + " times lost.");
     }
+    if (scoreWin > scoreLose){
+        alert("You win!");
+    }
+    else if (scoreWin === scoreLose){
+        alert("It's a draw!");
+    }
+    else{
+        alert("You lost!");
+    }
+    
 }
+
+let playerChoice, computerChoice, outcome;
 
 game();
