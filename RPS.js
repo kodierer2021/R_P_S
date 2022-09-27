@@ -59,7 +59,7 @@ outcome = determineOutcome();
 alert("You played "+ playerChoice + " the computer picked " + computerChoice + " and you " + outcome+ "!");
 }
 
-function game(){
+/*function game(){
     let scoreWin = 0, scoreDraw = 0, scoreLose = 0;
     for(i = 0;i<5;i++){
     playRound();
@@ -85,8 +85,8 @@ function game(){
         alert("You lost!");
     }
     
-}
+}*/
 
 let playerChoice, computerChoice, outcome;
 
-game();
+playRound();
